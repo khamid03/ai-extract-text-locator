@@ -1,6 +1,6 @@
 Flask
+gunicorn
 google-generativeai
-python-dotenv
 Pillow
 pdf2image
-gunicorn
+PyMuPDF
