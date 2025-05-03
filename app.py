@@ -3,9 +3,8 @@ import os
 from PIL import Image
 import google.generativeai as genai
 import fitz  # PyMuPDF
-from dotenv import load_dotenv
-load_dotenv()
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 UPLOAD_FOLDER = "uploads"
 app = Flask(__name__)
