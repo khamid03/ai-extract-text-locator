@@ -4,4 +4,3 @@ google-generativeai
 Pillow
 pdf2image
 PyMuPDF
-dotenv
