@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extraction Result</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      color: #34495e;
+    }
+
+    .highlight {
+      background-color: #dff9fb;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      background-color: #0984e3;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    a.button:hover {
+      background-color: #74b9ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Extracted Information</h2>
+    <p>You searched for: <span class="highlight">{{ target }}</span></p>
+    <p>Gemini says:</p>
+    <p class="highlight">{{ result }}</p>
+    <a class="button" href="/">Try Another</a>
+  </div>
+</body>
+</html>

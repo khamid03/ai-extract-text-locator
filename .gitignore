@@ -1,0 +1,14 @@
+# Ignore API keys and secrets
+.env
+key.json
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+venv/
+env/
+uploads/
+.idea
+.venv/
