@@ -33,10 +33,10 @@ def extract_text_position():
     image = pdf_to_image(filepath) if file.filename.lower().endswith(".pdf") else Image.open(filepath).convert("RGB")
 
     prompt = f"""
-You are given an image of a document. Your task is to return the direction location of the text and the text of what we are asking for "{target_text}".
+You are given an image of a document. Your task is to return the direction location of the answer and the answer of what we are asking for "{target_text}".
 
 Return result in text format:
-'The location is , the text is'
+'The location is , the answer is'
 """
 
     model = genai.GenerativeModel("gemini-1.5-flash")
