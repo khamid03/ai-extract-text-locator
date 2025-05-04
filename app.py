@@ -33,11 +33,26 @@ def extract_text_position():
     image = pdf_to_image(filepath) if file.filename.lower().endswith(".pdf") else Image.open(filepath).convert("RGB")
 
     prompt = f"""
-You are given an image of a document. Your task is to return the direction location of the answer and the answer of what we are asking for "{target_text}".
+You are an intelligent assistant that analyzes a document image to locate specific information.
 
-Return result in text format:
-'The location is , the answer is'
+Objective:
+Find the answer to the following query: "{target_text}"
+
+Instructions:
+1. Look at the document image.
+2. Extract the exact answer to the query if it exists.
+3. Determine its approximate position or context (e.g., section title, visual indicator).
+4. If the document contains pages, include the page number.
+5. If no answer is found, reply: "Answer not found in the document."
+
+Respond in this format:
+Answer: <the extracted answer>
+Location: <brief description of where in the document it was found>
+Page: <page number or 'N/A'>
+
+Only include relevant information. Do not explain your reasoning.
 """
+
 
     model = genai.GenerativeModel("gemini-1.5-flash")
     response = model.generate_content([prompt, image])
