@@ -1,7 +1,7 @@
 # 📘 Gemini-Powered Document Locator
 
 This Flask web application allows users to upload a document (PDF or image), ask a specific question about it, and receive an **extracted answer along with its approximate location and page number** using Google's Gemini large language model.
-
+[TRY YOURSELF](https://ai-extract-text-locator.onrender.com/)
 ---
 
 ## 🚀 Features
